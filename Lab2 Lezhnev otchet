@@ -1,0 +1,60 @@
+Задание 1
+
+def f(a):
+ 	b = [int(d) for d in str (a)]
+ 	return b == list(reversed(b))
+print(f(123))
+print(f(123321))
+print(f(252))
+print(f(567))
+print(f(787)) 
+
+
+Задание 2
+
+def f2 (a, c):
+ 	return [b for b in a if b % c==0]
+
+num_list = [223,225,222]
+print('a(2):')
+print(f2(num_list,2))
+print('b(3):')
+print(f2(num_list,3))
+print('c(5):')
+print(f2(num_list,5))
+
+
+Задание 3
+
+def f3 (b):
+ 	a =[d for d in str (b)]
+ 	a.reverse()
+ 	if b<0:
+ 		a.insert(0,a.pop())
+ 	return int (''.join(a))
+print(f3(230))
+print(f3(-4580))
+
+
+
+Задание 4
+
+from cmath import sqrt
+
+def f5 (a):
+ 	if a<0 or a>100000:
+ 		return 'Число вне диапазона'
+ 	else:
+ 		if a % 2 == 0 and a != 2:
+ 			return False
+ 		else:
+ 			if a == 0 or a == 1:
+ 				return False
+ 			else:
+ 				for n in range(3, int(sqrt(a).real) + 1, 2):
+ 					if a % n == 0: 
+ 						return False
+ 		return True
+
+
+print(f5(2))
